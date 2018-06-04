@@ -1,0 +1,20 @@
+{
+  "data": [
+    {"id": 1,
+      "tower" : "Napoli",
+      "apart" : 903,
+      "name" : "Marcos Fernando"
+    }, {
+      "id": 2,
+      "tower" : "Napoli",
+      "apart" : 903,
+      "name" : "Glauce Lima"
+    }, {
+      "id": 3,
+      "tower" : "Napoli",
+      "apart" : 201,
+     "name" : "Paulo"
+    }
+  ]
+}
+

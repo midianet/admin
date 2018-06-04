@@ -5,6 +5,7 @@ import { Error404Component } from '../components/error404/error404.component';
 import { HomeComponent } from '../components/home/home.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { ResidentListComponent } from '../resident/resident-list/resident-list.component';
+import { ResidentFormComponent } from '../resident/resident-form/resident-form.component';
 
 const routes: Routes = [
   // { path: 'cursos',
@@ -24,6 +25,16 @@ const routes: Routes = [
     {
       path: 'moradores',
       component: ResidentListComponent,
+      canActivate : [AuthGuard]
+    },
+    {
+      path: 'moradores/novo',
+      component: ResidentFormComponent,
+      canActivate : [AuthGuard]
+    },
+    {
+      path: 'moradores/:id',
+      component: ResidentFormComponent,
       canActivate : [AuthGuard]
     },
     { path: 'login',
