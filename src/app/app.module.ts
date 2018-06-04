@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ResidentModule } from './resident/resident.module';
+import { OnlyNumberDirective } from './core/only-number.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResidentModule } from './resident/resident.module';
     SettingsComponent,
     MenuComponent,
     Error404Component,
-    HomeComponent
+    HomeComponent,
+    OnlyNumberDirective
   ],
   imports: [
     BrowserModule,

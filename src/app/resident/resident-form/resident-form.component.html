@@ -17,28 +17,27 @@
             <!-- <div class="row"> -->
               <div class="form-group col-md-6">
                   <label for="tower">Torre</label>
-                  <select class="form-control" id="tower">
-                      <option>Selecione a torre</option>
-                      <option>option 1</option>
-                      <option>option 2</option>
-                      <option>option 3</option>
-                      <option>option 4</option>
-                      <option>option 5</option>
+                  <select class="form-control" id="tower" required>
+                      <option value="">Selecione a torre</option>
+                      <option value="1">Capri</option>
+                      <option value="2">Milão</option>
+                      <option value="3">Napoli</option>
+                      <option value="4">Turim</option>
                     </select>
               </div>
               <div class="form-group col-md-2">
                   <label for="apart">Apartamento</label>
-                  <input type="text" class="form-control" id="apart" placeholder="Infome o número">
+                  <input type="text" OnlyNumber="true" class="form-control" id="apart" placeholder="Infome o número" required >
               </div>
             <!-- </div>
             <div class="row"> -->
               <div class="form-group col-md-6">
                   <label for="name">Nome</label>
-                  <input type="text" class="form-control" id="name" placeholder="Infome o nome">
+                  <input type="text" class="form-control" id="name" placeholder="Infome o nome" required >
               </div>
               <div class="form-group col-md-2">
                   <label for="telegram">Telegram</label>
-                  <input type="text" class="form-control" id="telegram" placeholder="Infome o código">
+                  <input OnlyNumber="true" type="text" class="form-control" id="telegram" placeholder="Infome o código" required >
               </div>
           <!-- </div> -->
           </div>
