@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "datatables.net": "^1.10.16",
     "datatables.net-dt": "^1.10.16",
+    "hoek": "^4.2.1",
     "ngx-admin-lte": "^2.0.0-beta.11",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.0",
