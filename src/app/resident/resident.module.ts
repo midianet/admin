@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { ResidentListComponent } from './resident-list/resident-list.component';
 import { ResidentFormComponent } from './resident-form/resident-form.component';
 import { ResidentService } from './resident.service';
+import { AppDirectiveModule } from '../core/app-directive-module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { ResidentService } from './resident.service';
     FormsModule,
     BrowserModule,
     DataTablesModule,
+    AppDirectiveModule
   ],
   exports: [ResidentListComponent, ResidentFormComponent],
   declarations: [ResidentListComponent, ResidentFormComponent],

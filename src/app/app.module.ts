@@ -15,7 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ResidentModule } from './resident/resident.module';
-import { OnlyNumberDirective } from './core/only-number.directive';
+import { AppDirectiveModule } from './core/app-directive-module';
 
 @NgModule({
   declarations: [
@@ -25,15 +25,16 @@ import { OnlyNumberDirective } from './core/only-number.directive';
     SettingsComponent,
     MenuComponent,
     Error404Component,
-    HomeComponent,
-    OnlyNumberDirective
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    ResidentModule
+    ResidentModule,
+    AppDirectiveModule
   ],
+  exports: [AppDirectiveModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
