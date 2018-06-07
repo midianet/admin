@@ -1,44 +1,53 @@
 <section class="content-header" style="margin-bottom: 10px;">
-    <ul class="breadcrumb">
-        <li>
-            <button class="btn btn-primary" (click)="list()"><i class="fa  fa-arrow-left"></i> <span> Salvar</span></button>
-        </li>
-        <li>
-            <button class="btn btn-warning"   (click)="list()"><i class="fa  fa-arrow-left"></i> <span> Voltar</span></button>
-        </li>
-      </ul>
-    <h1>
-      Moradores
-      <small>Formulário</small>
-    </h1>
-  </section>
-  <section class="content">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="box">
-          <div class="box-body">
-            <!-- <div class="row"> -->
-              <div class="form-group col-md-6">
-                  <label for="tower">Torre</label>
-                  <select class="form-control" id="tower" required name="tower" [(ngModel)]="resident.tower" >
-                      <option value="">Selecione a torre</option>
-                      <option *ngFor="let tower of towers" value="{{ tower }}">{{ tower.name }}</option>
-                    </select>
-              </div>
-              <div class="form-group col-md-2">
-                  <label for="apart">Apartamento</label>
-                  <input type="text" onlyNumber class="form-control" id="apart" name="apart" [(ngModel)]="resident.apto"  placeholder="Infome o número" required >
-              </div>
-              <div class="form-group col-md-6">
-                  <label for="name">Nome</label>
-                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="resident.name" placeholder="Infome o nome" required >
-              </div>
-              <div class="form-group col-md-2">
-                  <label for="telegram">Telegram</label>
-                  <input type="text" onlyNumber class="form-control" id="telegram" name="telegram" [(ngModel)]="resident.telegram" placeholder="Infome o código" required >
-              </div>
-          </div>
+  <ul class="breadcrumb">
+      <li>
+          <button class="btn btn-primary" (click)="list()"><i class="fa  fa-arrow-left"></i> <span> Salvar</span></button>
+      </li>
+      <li>
+          <button class="btn btn-warning"   (click)="list()"><i class="fa  fa-arrow-left"></i> <span> Voltar</span></button>
+      </li>
+      <li>
+        <button class="btn btn-warning"   (click)="save()"><i class="fa  fa-arrow-left"></i> <span> Save</span></button>
+    </li>
+    <li>
+      <button class="btn btn-warning"   (click)="remove()"><i class="fa  fa-arrow-left"></i> <span> Remove</span></button>
+  </li>
+  <li>
+    <button class="btn btn-warning"   (click)="get()"><i class="fa  fa-arrow-left"></i> <span> Remove</span></button>
+  </li>
+    </ul>
+  <h1>
+    Moradores
+    <small>Formulário</small>
+  </h1>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-body">
+          <!-- <div class="row"> -->
+            <div class="form-group col-md-6">
+                <label for="tower">Torre</label>
+                <select class="form-control" id="tower" required name="tower" [(ngModel)]="resident.tower" >
+                    <option value="">Selecione a torre</option>
+                    <option *ngFor="let tower of towers" value="{{ tower }}">{{ tower.name }}</option>
+                  </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="apart">Apartamento</label>
+                <input type="text" onlyNumber class="form-control" id="apart" name="apart" [(ngModel)]="resident.apto"  placeholder="Infome o número" required >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="resident.name" placeholder="Infome o nome" required >
+            </div>
+            <div class="form-group col-md-2">
+                <label for="telegram">Telegram</label>
+                <input type="text" onlyNumber class="form-control" id="telegram" name="telegram" [(ngModel)]="resident.telegram" placeholder="Infome o código" required >
+            </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

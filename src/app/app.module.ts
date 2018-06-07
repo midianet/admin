@@ -16,6 +16,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ResidentModule } from './resident/resident.module';
 import { AppDirectiveModule } from './core/app-directive-module';
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppDirectiveModule } from './core/app-directive-module';
     AppRoutingModule,
     AuthModule,
     ResidentModule,
-    AppDirectiveModule
+    AppDirectiveModule,
+    StorageServiceModule
   ],
   exports: [AppDirectiveModule],
   bootstrap: [AppComponent]

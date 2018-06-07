@@ -23,6 +23,18 @@ export class ResidentFormComponent implements OnInit {
     this.router.navigate(['/moradores']);
   }
 
+  save(){
+    this.service.set();
+  }
+
+  remove(){
+    this.service.remove();
+  }
+
+  get(){
+    this.service.get();
+  }
+
   ngOnInit() {
     this.towers = [
       {id: 1, name: 'Capri'},
