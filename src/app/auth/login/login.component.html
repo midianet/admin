@@ -1,3 +1,4 @@
+
 <div class="login-box2">
   <div class="login-box">
     <div class=row>
@@ -9,19 +10,18 @@
     </div>
   </div>
     <div class="card">
-
       <div class="card-body login-card-body">
-        <form>
-          <div class="form-group has-feedback">
-            <input type="text" class="form-control " placeholder="Usuário" autofocus required >
+          <form [formGroup]="form">
+          <div class="form-group has-feedback" [class.has-error]="!form.get('user').valid && form.get('user').touched">
+            <input type="text" class="form-control"  id="user" name="user" formControlName="user"  placeholder="Usuário" autofocus>
             <span class="fa fa-user form-control-feedback"></span>
           </div>
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Senha" required>
+          <div class="form-group has-feedback" [class.has-error]="!form.get('password').valid && form.get('password').touched">
+            <input type="password" class="form-control" id="password" name="password" formControlName="password" placeholder="Senha">
             <span class="fa fa-lock form-control-feedback"></span>
           </div>
-          <div class="form-group has-feedback">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-flat" [disabled]="!form.valid" (click)="login()" >Entrar</button>
           </div>
         </form>
       </div>

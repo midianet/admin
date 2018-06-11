@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 
-// import { CommonModule } from '@angular/common';
 import { OnlyNumberDirective } from './only-number.directive';
+import { ValidatorStyleDirective } from './validator.style.directive';
 
 @NgModule({
-  // imports: [
-  //   CommonModule
-  // ],
-  exports: [OnlyNumberDirective],
-  declarations: [OnlyNumberDirective]
+  exports: [OnlyNumberDirective, ValidatorStyleDirective],
+  declarations: [OnlyNumberDirective, ValidatorStyleDirective]
 })
 export class AppDirectiveModule { }

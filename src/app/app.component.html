@@ -1,10 +1,11 @@
-<app-header></app-header>
-<app-menu></app-menu>
-<div class="content-wrapper">
-  <section class="content">
-      <router-outlet></router-outlet>
-  </section>
+<div [hidden]="!logged()">
+    <app-header ></app-header>
+    <app-menu></app-menu>
+</div>
+<div [className]="logged() ? 'content-wrapper' : ''">
+    <section class="content">
+        <router-outlet></router-outlet>
+    </section>
 </div>
 <!-- <app-settings></app-settings> -->
 <!-- <app-footer></app-footer> -->
-

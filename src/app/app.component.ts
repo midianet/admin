@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  logged(){
+    return localStorage.getItem("COND_TOKEN") != null;
+  }
 }

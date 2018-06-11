@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
-import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppDirectiveModule } from '../core/app-directive-module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    ReactiveFormsModule,
+    AppDirectiveModule,
+    HttpModule
   ],
   exports: [LoginComponent],
   declarations: [LoginComponent],

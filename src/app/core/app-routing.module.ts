@@ -20,7 +20,8 @@ const routes: Routes = [
     // },
     { path: 'home',
       component: HomeComponent,
-      canActivate : [AuthGuard]
+      canActivate : [AuthGuard],
+      runGuardsAndResolvers: 'always',
     },
     {
       path: 'moradores',
